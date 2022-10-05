@@ -22,29 +22,22 @@ h1 {
   font-weight: bold;
 }
 .container {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin-top: 2rem;
   height: 80vh;
 }
 
-form, .mensajes {
+.mensajes {
   padding: 2rem;
   max-width: 600px;
   margin: 0 auto;
 }
-.mensajes {
+/* .mensajes {
   text-align: center;
 }
 .resultado {
   border: 2px solid #00b0d7;
   padding: 3rem 0;
 }
-form label {
-  text-align: center;
-  font-size: 2rem;
-}
+
 input[type="submit"]:disabled{
   opacity: .2;
   color: black;
@@ -62,4 +55,4 @@ input[type="submit"]:disabled{
 }
 .resultado p {
   margin: 0;
-}
+} */
