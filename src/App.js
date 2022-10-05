@@ -5,7 +5,7 @@ import Header from "./components/Header";
 function App() {
   //Definir el State
   const [cantidad, guardarCantidad] = useState(0);
-  const [plazo, guardarPlazo] = useState(0);
+  const [plazo, guardarPlazo] = useState('');
   return (
     <Fragment>
       <Header

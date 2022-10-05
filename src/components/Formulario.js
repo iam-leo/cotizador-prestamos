@@ -1,5 +1,8 @@
-
+import { useState } from "react";
 const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
+
+    //Definir el state
+    const [error, guardarError] = useState(false);
 
     const leerCantidad = (e) => {
         guardarCantidad(parseInt(e.target.value));
@@ -7,8 +10,23 @@ const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
     const leerPlazo = (e) => {
         guardarPlazo(parseInt(e.target.value));
     }
+
+    //Cuando el usuario hace submit
+    const calcularPrestamo = e => {
+        e.preventDefault();
+
+        //Validar
+        if(cantidad === 0 || plazo === '' ){
+            guardarError(true)
+        }
+
+        //Cotizar
+    }
     return (
-        <form className="p-8 max-w-[600px] mx-auto">
+        <form
+            className="p-8 max-w-[600px] mx-auto"
+            onSubmit={calcularPrestamo}
+        >
           <div>
               <div>
                   <label className="text-center text-indigo-900 text-3xl font-semibold">Cantidad Prestamo</label>
@@ -35,7 +53,7 @@ const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
                       type="submit"
                       value="Calcular"
                       className="w-full bg-indigo-600 text-white p-2 rounded-md cursor-pointer disabled:opacity-50 font-semibold uppercase tracking-wide"
-                      disabled
+                      //disabled
                     />
                 </div>
             </div>
