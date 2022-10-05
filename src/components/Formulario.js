@@ -1,5 +1,12 @@
 
-const Formulario = () => {
+const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
+
+    const leerCantidad = (e) => {
+        guardarCantidad(parseInt(e.target.value));
+    }
+    const leerPlazo = (e) => {
+        guardarPlazo(parseInt(e.target.value));
+    }
     return (
         <form className="p-8 max-w-[600px] mx-auto">
           <div>
@@ -9,11 +16,13 @@ const Formulario = () => {
                       className="w-full bg-slate-200 mt-1.5 p-2 rounded-md"
                       type="number"
                       placeholder="Ejemplo: 3000"
+                      onChange={leerCantidad}
                   />
               </div>
               <div className="mt-5">
                   <label className="text-center text-indigo-900 text-3xl font-semibold">Plazo para pagar</label>
-                  <select className="w-full bg-slate-200 mt-1.5 py-2 px-3 rounded-md">
+                  <select className="w-full bg-slate-200 mt-1.5 py-2 px-3 rounded-md"
+                  onChange={leerPlazo}>
                       <option value="">Seleccionar</option>
                       <option value="3">3 meses</option>
                       <option value="6">6 meses</option>
