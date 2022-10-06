@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { calcularTotal } from "../helpers";
+
 const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
 
     //Definir el state
@@ -25,6 +27,7 @@ const Formulario = ({cantidad, guardarCantidad, plazo, guardarPlazo}) => {
         guardarError(false);
 
         //Cotizar
+        calcularTotal(cantidad, plazo);
     }
     return (
         <>
