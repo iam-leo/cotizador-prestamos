@@ -19,4 +19,30 @@ export function calcularTotal (cantidad, plazo){
 
     //Formateamos la cantidad con 2 decimales (.toFixed devuelve un string, lo convertimos a número con Number())
     Number(totalCantidad.toFixed(2));
+
+    // Intereses por plazo
+    // 3 meses -> 5%
+    // 6 meses -> 10%
+    // 12 meses -> 15%
+    // 24 meses -> 20%
+
+    let totalPlazo;
+    switch (plazo) {
+        case 3:
+            totalPlazo = cantidad * .05;
+            break;
+        case 6:
+            totalPlazo = cantidad * .1;
+            break;
+        case 12:
+            totalPlazo = cantidad * .15;
+            break;
+        case 24:
+            totalPlazo = cantidad * .2;
+            break;
+        default:
+            break;
+    }
+
+    return totalCantidad + totalPlazo + cantidad
 }
