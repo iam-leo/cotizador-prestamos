@@ -24,22 +24,3 @@ h1 {
 .container {
   height: 80vh;
 }
-
-.mensajes {
-  padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-/*
-.resultado {
-  border: 2px solid #00b0d7;
-  padding: 3rem 0;
-}
-
-input[type="submit"]:disabled{
-  opacity: .2;
-  color: black;
-}
-.resultado p {
-  margin: 0;
-} */
